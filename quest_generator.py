@@ -5,7 +5,7 @@ Generuje serię questów do gry tekstowej na podstawie ogólnego zarysu fabuły
 i pliku domain.pddl. Każdy quest to para plików problem.pddl + misc.json.
 
 Wymaga:
-    - Ollama z modelem qwen3:8b  (ollama pull qwen3:8b)
+    - Ollama z modelem qwen3-coder (ollama pull qwen3-coder)
     - unified_planning[fast-downward]
     - requests
 
@@ -40,9 +40,9 @@ from unified_planning.shortcuts import OneshotPlanner
 # ══════════════════════════════════════════════════════════════════════════════
 
 OLLAMA_URL   = "http://localhost:11434/api/generate"
-MODEL        = "gemma3:27b"  #"qwen3:8b"
-NUM_QUESTS   = 5          # ile questów wygenerować
-MAX_RETRIES  = 20         # ile razy próbować naprawić quest
+MODEL        = "qwen3-coder"  #"qwen3:8b"
+NUM_QUESTS   = 10          # ile questów wygenerować
+MAX_RETRIES  = 10         # ile razy próbować naprawić quest
 THINK_BUDGET = 8192       # tokeny na "myślenie" (/no_think wyłącza CoT)
 OUTPUT_DIR   = Path("quests")
 DEBUG        = False          # włącz flagą --debug
@@ -902,7 +902,7 @@ def main():
         description="Generator questów PDDL oparty na Ollama + qwen3:8b"
     )
     parser.add_argument("story", help="Zarys fabuły (tekst lub plik .txt)")
-    parser.add_argument("domain", help="Ścieżka do pliku domain.pddl")
+    parser.add_argument("domain", default="domain.pddl", help="Ścieżka do pliku domain.pddl")
     parser.add_argument(
         "--quests", type=int, default=NUM_QUESTS,
         help=f"Liczba questów do wygenerowania (domyślnie {NUM_QUESTS})"
