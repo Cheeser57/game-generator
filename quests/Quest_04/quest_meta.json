@@ -1,0 +1,13 @@
+{
+  "id": 4,
+  "title": "The Choice of Gold",
+  "phase": "Transformation",
+  "summary": "As the witcher learns the truth, they must choose between supporting Sapkowski’s claim to the stories or the Guild’s right to profit from them. The decision leads to a confrontation with the corrupted spirit that has been feeding on greed.",
+  "start_action": "talk",
+  "end_action": "unlock-path",
+  "key_objects": [
+    "gold-coin",
+    "spirit-essence"
+  ],
+  "narrative_goal": "Make a choice that reflects the moral complexity of the conflict and prepare for the final confrontation."
+}

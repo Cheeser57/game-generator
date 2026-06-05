@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "title": "The Dispute Begins",
+    "phase": "Call to Adventure",
+    "summary": "The witcher is hired by a mysterious client to investigate the disappearance of negotiators from both Sapkowski and the Guild. The quest begins in the bustling city of Novigrad, where the conflict first erupted.",
+    "start_action": "move",
+    "end_action": "inspect",
+    "key_objects": [
+      "disappeared-negotiator-note",
+      "guild-coin"
+    ],
+    "narrative_goal": "Investigate the initial disappearances and uncover the first clue about the source of the conflict."
+  },
+  {
+    "id": 2,
+    "title": "The Mountain's Whisper",
+    "phase": "Trials",
+    "summary": "Following a lead to the ancient ruins near the mountain, the witcher discovers a hidden chamber containing relics that suggest the mountain is more than just a source of wealth. The chamber is guarded by an ancient spirit.",
+    "start_action": "inspect",
+    "end_action": "attack",
+    "key_objects": [
+      "ancient-relic",
+      "spirit-key"
+    ],
+    "narrative_goal": "Navigate the dangerous ruins and confront the first guardian of the mountain's secrets."
+  },
+  {
+    "id": 3,
+    "title": "The Legacy of Stories",
+    "phase": "Trials",
+    "summary": "The witcher uncovers the truth behind the 'Money from the Mountain' — a legend born from a pact between Sapkowski and the Guild. They must seek out the old storyteller in the forest to understand the nature of the pact.",
+    "start_action": "attack",
+    "end_action": "talk",
+    "key_objects": [
+      "storyteller-tale",
+      "pact-scroll"
+    ],
+    "narrative_goal": "Reveal the origin of the conflict and learn about the true nature of the pact that binds both sides."
+  },
+  {
+    "id": 4,
+    "title": "The Choice of Gold",
+    "phase": "Transformation",
+    "summary": "As the witcher learns the truth, they must choose between supporting Sapkowski’s claim to the stories or the Guild’s right to profit from them. The decision leads to a confrontation with the corrupted spirit that has been feeding on greed.",
+    "start_action": "talk",
+    "end_action": "unlock-path",
+    "key_objects": [
+      "gold-coin",
+      "spirit-essence"
+    ],
+    "narrative_goal": "Make a choice that reflects the moral complexity of the conflict and prepare for the final confrontation."
+  },
+  {
+    "id": 5,
+    "title": "The Mountain's Rest",
+    "phase": "Return",
+    "summary": "The witcher returns to Novigrad, having resolved the conflict. Though an uneasy peace is restored, the mountain continues to whisper, promising more wealth to those bold enough to seek it.",
+    "start_action": "unlock-path",
+    "end_action": "move",
+    "key_objects": [
+      "peace-agreement",
+      "mountain-whisper"
+    ],
+    "narrative_goal": "Conclude the quest by bringing resolution to the conflict and reflecting on the deeper meaning of art, legacy, and greed."
+  }
+]

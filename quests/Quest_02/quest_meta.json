@@ -1,0 +1,13 @@
+{
+  "id": 2,
+  "title": "The Mountain's Whisper",
+  "phase": "Trials",
+  "summary": "Following a lead to the ancient ruins near the mountain, the witcher discovers a hidden chamber containing relics that suggest the mountain is more than just a source of wealth. The chamber is guarded by an ancient spirit.",
+  "start_action": "inspect",
+  "end_action": "attack",
+  "key_objects": [
+    "ancient-relic",
+    "spirit-key"
+  ],
+  "narrative_goal": "Navigate the dangerous ruins and confront the first guardian of the mountain's secrets."
+}

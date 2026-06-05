@@ -1,0 +1,24 @@
+{
+  "locations": {
+    "novigrad": "Novigrad – A bustling city of merchants, bards, and political intrigue where the dispute between Sapkowski and the Guild first erupted.",
+    "witcher_guild_hall": "Witcher Guild Hall – A hidden place where witchers gather to take on contracts and discuss their work."
+  },
+  "items": {
+    "spirit_soul": "Spirit Soul – A fragment of the ancient spirit's essence, corrupted by greed.",
+    "golden_contract": "Golden Contract – A contract signed by both parties, outlining their agreement over the stories."
+  },
+  "characters": {
+    "mysterious_client": "Mysterious Client – A shadowy figure who hires the witcher to investigate the disappearances.",
+    "witcher_master": "Witcher Master – The leader of the witcher guild who oversees the investigation."
+  },
+  "action_text": {
+    "move": "I move from ${from} to ${to}.",
+    "take": "I pick up ${item}.",
+    "drop": "I drop ${item} in ${r}.",
+    "talk": "I talk to ${character}.",
+    "attack": "I attack ${character} with ${weapon}.",
+    "give": "I give ${item} to ${character}.",
+    "inspect": "I inspect ${r}.",
+    "unlock-path": "I unlock a new path from ${from} to ${to} with ${item}."
+  }
+}

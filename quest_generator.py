@@ -40,9 +40,9 @@ from unified_planning.shortcuts import OneshotPlanner
 # ══════════════════════════════════════════════════════════════════════════════
 
 OLLAMA_URL   = "http://localhost:11434/api/generate"
-MODEL        = "gemma3:27b"  #"qwen3:8b"
+MODEL        = "qwen3-coder:30b"  #"qwen3:8b"
 NUM_QUESTS   = 5          # ile questów wygenerować
-MAX_RETRIES  = 20         # ile razy próbować naprawić quest
+MAX_RETRIES  = 5         # ile razy próbować naprawić quest
 THINK_BUDGET = 8192       # tokeny na "myślenie" (/no_think wyłącza CoT)
 OUTPUT_DIR   = Path("quests")
 DEBUG        = False          # włącz flagą --debug
@@ -862,20 +862,35 @@ def generate_quest_files(
             dbg_err(msg)
 
         if attempt < MAX_RETRIES:
-            # Prosimy LLM o naprawe
-            plan_str = ", ".join(plan_steps) if plan_steps else "brak"
             dbg_section(f"Quest {quest.get('id','?')} – retry {attempt}")
-            prompt = QUEST_FIX_PROMPT.replace("@ERROR@", error_msg)
-            prompt = prompt.replace("@PLAN@", plan_str)
-            prompt = prompt.replace("@PREV_PDDL@", prev_pddl)
-            prompt = prompt.replace("@QUEST_JSON@", quest_json)
-            prompt = prompt.replace("@DOMAIN@", domain_text)
-            prompt = prompt.replace("@OBJECTS_BLOCK@", objects_block)
-            raw = ollama(
-                prompt,
-                system=QUEST_EXPAND_SYSTEM,
-                temperature=0.5,
-            )
+            # Gdy solver nie znalazł planu (quest niewykonalny), generuj od nowa
+            # zamiast próbować naprawiać – fix prompt nie radzi sobie z tym błędem
+            if "niewykonalny" in error_msg:
+                print(f"    [RESTART] Quest niewykonalny – generuję od nowa...")
+                prompt = QUEST_EXPAND_PROMPT.replace("@DOMAIN@", domain_text)
+                prompt = prompt.replace("@QUEST_JSON@", quest_json)
+                prompt = prompt.replace("@CONTEXT@", context)
+                prompt = prompt.replace("@TARGET_ACTIONS@", target_actions_text)
+                prompt = prompt.replace("@OBJECTS_BLOCK@", objects_block)
+                raw = ollama(
+                    prompt,
+                    system=QUEST_EXPAND_SYSTEM,
+                    temperature=0.6 + attempt * 0.05,  # lekko zwiększaj losowość z każdą próbą
+                )
+            else:
+                # Prosimy LLM o naprawę konkretnego błędu
+                plan_str = ", ".join(plan_steps) if plan_steps else "brak"
+                prompt = QUEST_FIX_PROMPT.replace("@ERROR@", error_msg)
+                prompt = prompt.replace("@PLAN@", plan_str)
+                prompt = prompt.replace("@PREV_PDDL@", prev_pddl)
+                prompt = prompt.replace("@QUEST_JSON@", quest_json)
+                prompt = prompt.replace("@DOMAIN@", domain_text)
+                prompt = prompt.replace("@OBJECTS_BLOCK@", objects_block)
+                raw = ollama(
+                    prompt,
+                    system=QUEST_EXPAND_SYSTEM,
+                    temperature=0.5,
+                )
 
     raise RuntimeError(
         f"Nie udało się wygenerować poprawnego questa '{quest['title']}' "

@@ -1,0 +1,13 @@
+{
+  "id": 5,
+  "title": "The Mountain's Rest",
+  "phase": "Return",
+  "summary": "The witcher returns to Novigrad, having resolved the conflict. Though an uneasy peace is restored, the mountain continues to whisper, promising more wealth to those bold enough to seek it.",
+  "start_action": "unlock-path",
+  "end_action": "move",
+  "key_objects": [
+    "peace-agreement",
+    "mountain-whisper"
+  ],
+  "narrative_goal": "Conclude the quest by bringing resolution to the conflict and reflecting on the deeper meaning of art, legacy, and greed."
+}
