@@ -1,0 +1,24 @@
+{
+  "locations": {
+    "sapkowski_manor": "Sapkowski Manor – A modest estate where Andrzej Sapkowski resides, surrounded by old stories and forgotten tales.",
+    "forest_clearing": "Forest Clearing – A peaceful clearing in the woods where an old storyteller is said to live."
+  },
+  "items": {
+    "storyteller_journal": "Storyteller Journal – A journal containing the pact between Sapkowski and the Guild.",
+    "golden_contract": "Golden Contract – A contract signed by both parties, outlining their agreement over the stories."
+  },
+  "characters": {
+    "sapkowski": "Andrzej Sapkowski – A renowned author who created the world of witchers and monsters.",
+    "old_storyteller": "Old Storyteller – An ancient figure who knows the truth behind the pact and the mountain's curse."
+  },
+  "action_text": {
+    "move": "I move from ${from} to ${to}.",
+    "take": "I pick up ${item}.",
+    "drop": "I drop ${item} in ${r}.",
+    "talk": "I talk to ${character}.",
+    "attack": "I attack ${character} with ${weapon}.",
+    "give": "I give ${item} to ${character}.",
+    "inspect": "I inspect ${r}.",
+    "unlock-path": "I unlock a new path from ${from} to ${to} with ${item}."
+  }
+}

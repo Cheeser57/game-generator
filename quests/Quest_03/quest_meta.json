@@ -1,0 +1,13 @@
+{
+  "id": 3,
+  "title": "The Legacy of Stories",
+  "phase": "Trials",
+  "summary": "The witcher uncovers the truth behind the 'Money from the Mountain' — a legend born from a pact between Sapkowski and the Guild. They must seek out the old storyteller in the forest to understand the nature of the pact.",
+  "start_action": "attack",
+  "end_action": "talk",
+  "key_objects": [
+    "storyteller-tale",
+    "pact-scroll"
+  ],
+  "narrative_goal": "Reveal the origin of the conflict and learn about the true nature of the pact that binds both sides."
+}

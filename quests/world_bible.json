@@ -1,0 +1,194 @@
+{
+  "locations": {
+    "novigrad": {
+      "name": "Novigrad",
+      "description": "A bustling city of merchants, bards, and political intrigue where the dispute between Sapkowski and the Guild first erupted.",
+      "inspect_text": "The city is filled with whispers of the mountain's treasure and the growing conflict between the two sides."
+    },
+    "guild_hall": {
+      "name": "Guild Hall",
+      "description": "A grand building where the Guild of Red Projects holds its meetings and manages its affairs.",
+      "inspect_text": "The hall is adorned with banners of the Guild, and there are signs of recent activity and tension."
+    },
+    "sapkowski_manor": {
+      "name": "Sapkowski Manor",
+      "description": "A modest estate where Andrzej Sapkowski resides, surrounded by old stories and forgotten tales.",
+      "inspect_text": "The manor is quiet, with books and manuscripts scattered around, suggesting a life dedicated to storytelling."
+    },
+    "ancient_ruins": {
+      "name": "Ancient Ruins",
+      "description": "A forgotten site near the mountain where ancient relics and spirits are said to dwell.",
+      "inspect_text": "The ruins are overgrown with moss and vines, and there are strange markings on the stones."
+    },
+    "mountain_cave": {
+      "name": "Mountain Cave",
+      "description": "A dark cave beneath the mountain, where the ancient spirit is said to rest.",
+      "inspect_text": "The cave is filled with echoes of greed and ambition, and the air is thick with a cursed energy."
+    },
+    "forest_clearing": {
+      "name": "Forest Clearing",
+      "description": "A peaceful clearing in the woods where an old storyteller is said to live.",
+      "inspect_text": "The clearing is peaceful, with a small hut and a fire pit, and the scent of old stories lingers."
+    },
+    "royal_palace": {
+      "name": "Royal Palace",
+      "description": "The seat of power where kings debate the fate of the mountain's gold.",
+      "inspect_text": "The palace is grand and filled with the weight of decisions that could change the fate of the continent."
+    },
+    "witcher_guild_hall": {
+      "name": "Witcher Guild Hall",
+      "description": "A hidden place where witchers gather to take on contracts and discuss their work.",
+      "inspect_text": "The hall is filled with maps, weapons, and the scent of adventure and danger."
+    }
+  },
+  "items": {
+    "negotiator_note": {
+      "name": "Negotiator Note",
+      "description": "A note detailing the missing negotiators and their last known whereabouts."
+    },
+    "ancient_relic": {
+      "name": "Ancient Relic",
+      "description": "A relic found in the ruins that holds the power to awaken the mountain's spirit."
+    },
+    "storyteller_journal": {
+      "name": "Storyteller Journal",
+      "description": "A journal containing the pact between Sapkowski and the Guild."
+    },
+    "golden_contract": {
+      "name": "Golden Contract",
+      "description": "A contract signed by both parties, outlining their agreement over the stories."
+    },
+    "spirit_soul": {
+      "name": "Spirit Soul",
+      "description": "A fragment of the ancient spirit's essence, corrupted by greed."
+    },
+    "witcher_sigil": {
+      "name": "Witcher Sigil",
+      "description": "A symbol of the witcher's authority and protection."
+    },
+    "mountain_whisper": {
+      "name": "Mountain Whisper",
+      "description": "A mysterious artifact that whispers promises of gold to those who listen."
+    }
+  },
+  "characters": {
+    "mysterious_client": {
+      "name": "Mysterious Client",
+      "description": "A shadowy figure who hires the witcher to investigate the disappearances.",
+      "dialogue": {
+        "default": "The mountain's whispers are growing louder. You must uncover the truth before it's too late.",
+        "after_key": "You have the key to the truth. The mountain will not rest until its gold is claimed."
+      }
+    },
+    "guild_representative": {
+      "name": "Guild Representative",
+      "description": "A confident and calculating negotiator representing the Guild of Red Projects.",
+      "dialogue": {
+        "default": "The stories belong to the world, not to one man. We built the legend.",
+        "after_key": "You have seen the pact. The stories are ours, and the gold is ours to claim."
+      }
+    },
+    "sapkowski": {
+      "name": "Andrzej Sapkowski",
+      "description": "A renowned author who created the world of witchers and monsters.",
+      "dialogue": {
+        "default": "The mountain would not exist without the stories I created. The legacy is mine.",
+        "after_key": "You have seen the truth. The stories are mine, and the mountain is mine."
+      }
+    },
+    "old_storyteller": {
+      "name": "Old Storyteller",
+      "description": "An ancient figure who knows the truth behind the pact and the mountain's curse.",
+      "dialogue": {
+        "default": "The pact was made long ago. The mountain feeds on greed, and it will not stop.",
+        "after_key": "The stories are not yours to claim. The mountain's whisper will never end."
+      }
+    },
+    "king_of_novigrad": {
+      "name": "King of Novigrad",
+      "description": "A ruler who seeks control over the mountain's gold.",
+      "dialogue": {
+        "default": "The gold must be under my control. The kingdom needs it.",
+        "after_key": "You have seen the truth. The gold is mine, and the mountain will serve me."
+      }
+    },
+    "witcher_master": {
+      "name": "Witcher Master",
+      "description": "The leader of the witcher guild who oversees the investigation.",
+      "dialogue": {
+        "default": "The mountain's curse is real. You must choose your path wisely.",
+        "after_key": "The choice is yours. The mountain's whisper will always call to those who seek gold."
+      }
+    }
+  },
+  "quest_objects": {
+    "1": {
+      "rooms": [
+        "novigrad",
+        "guild_hall"
+      ],
+      "items": [
+        "negotiator_note"
+      ],
+      "characters": [
+        "mysterious_client",
+        "guild_representative"
+      ]
+    },
+    "2": {
+      "rooms": [
+        "ancient_ruins",
+        "mountain_cave"
+      ],
+      "items": [
+        "ancient_relic",
+        "spirit_soul"
+      ],
+      "characters": [
+        "old_storyteller"
+      ]
+    },
+    "3": {
+      "rooms": [
+        "sapkowski_manor",
+        "forest_clearing"
+      ],
+      "items": [
+        "storyteller_journal",
+        "golden_contract"
+      ],
+      "characters": [
+        "sapkowski",
+        "old_storyteller"
+      ]
+    },
+    "4": {
+      "rooms": [
+        "witcher_guild_hall",
+        "royal_palace"
+      ],
+      "items": [
+        "witcher_sigil",
+        "mountain_whisper"
+      ],
+      "characters": [
+        "witcher_master",
+        "king_of_novigrad"
+      ]
+    },
+    "5": {
+      "rooms": [
+        "novigrad",
+        "witcher_guild_hall"
+      ],
+      "items": [
+        "spirit_soul",
+        "golden_contract"
+      ],
+      "characters": [
+        "mysterious_client",
+        "witcher_master"
+      ]
+    }
+  }
+}

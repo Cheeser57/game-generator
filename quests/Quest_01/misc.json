@@ -1,0 +1,23 @@
+{
+  "locations": {
+    "novigrad": "Novigrad – A bustling city of merchants, bards, and political intrigue where the dispute between Sapkowski and the Guild first erupted.",
+    "guild_hall": "Guild Hall – A grand building where the Guild of Red Projects holds its meetings and manages its affairs."
+  },
+  "items": {
+    "negotiator_note": "Negotiator Note – A note detailing the missing negotiators and their last known whereabouts."
+  },
+  "characters": {
+    "mysterious_client": "Mysterious Client – A shadowy figure who hires the witcher to investigate the disappearances.",
+    "guild_representative": "Guild Representative – A confident and calculating negotiator representing the Guild of Red Projects."
+  },
+  "action_text": {
+    "move": "I move from ${from} to ${to}.",
+    "take": "I pick up ${item}.",
+    "drop": "I drop ${item} in ${r}.",
+    "talk": "I talk to ${character}.",
+    "attack": "I attack ${character} with ${weapon}.",
+    "give": "I give ${item} to ${character}.",
+    "inspect": "I inspect ${r}.",
+    "unlock-path": "I unlock a new path from ${from} to ${to} with ${item}."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "locations": {
+    "ancient_ruins": "Ancient Ruins – A forgotten site near the mountain where ancient relics and spirits are said to dwell.",
+    "mountain_cave": "Mountain Cave – A dark cave beneath the mountain, where the ancient spirit is said to rest."
+  },
+  "items": {
+    "ancient_relic": "Ancient Relic – A relic found in the ruins that holds the power to awaken the mountain's spirit.",
+    "spirit_key": "Spirit Soul – A fragment of the ancient spirit's essence, corrupted by greed."
+  },
+  "characters": {
+    "old_storyteller": "Old Storyteller – An ancient figure who knows the truth behind the pact and the mountain's curse."
+  },
+  "action_text": {
+    "move": "I move from ${from} to ${to}.",
+    "take": "I pick up ${item}.",
+    "drop": "I drop ${item} in ${r}.",
+    "talk": "I talk to ${character}.",
+    "attack": "I attack ${character} with ${weapon}.",
+    "give": "I give ${item} to ${character}.",
+    "inspect": "I inspect ${r}.",
+    "unlock-path": "I unlock a new path from ${from} to ${to} with ${item}."
+  }
+}

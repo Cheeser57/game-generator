@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "title": "The Dispute Begins",
+  "phase": "Call to Adventure",
+  "summary": "The witcher is hired by a mysterious client to investigate the disappearance of negotiators from both Sapkowski and the Guild. The quest begins in the bustling city of Novigrad, where the conflict first erupted.",
+  "start_action": "move",
+  "end_action": "inspect",
+  "key_objects": [
+    "disappeared-negotiator-note",
+    "guild-coin"
+  ],
+  "narrative_goal": "Investigate the initial disappearances and uncover the first clue about the source of the conflict."
+}
